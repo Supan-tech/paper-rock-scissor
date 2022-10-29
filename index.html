@@ -1,13 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <title>Paper Rock Scissors</title>
+    <script src="https://kit.fontawesome.com/33b2b0faed.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <div class="overlay" id="overlay">
+        <div class="wrapper">
+            <h1 id="end-game-text"></h1>
+            <button id="restart">restart</button>
+        </div>
+    </div>
+    <div class="title">
+        <h1>Paper Rock Scissors</h1>
+    </div>
+
+    <div class="game-display">
+        <div class="container">
+            <p class="player-side">Player</p>
+            <div class="player-selection" id="player-selection">
+
+            </div>
+            <div class="player-score">
+                <p class="score-text">Score</p>
+                <div class="score-container">
+                    <i data-score="player" class="check-icon fa-regular fa-circle-check"></i>
+                    <i data-score="player" class="check-icon fa-regular fa-circle-check"></i>
+                    <i data-score="player" class="check-icon fa-regular fa-circle-check"></i>
+                    <i data-score="player" class="check-icon fa-regular fa-circle-check"></i>
+                    <i data-score="player" class="check-icon fa-regular fa-circle-check"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p class="round" id="round">Round 1</p>
+            <p class="versus">V S</p>
+        </div>
+        <div class="container">
+            <p class="computer-side">Computer</p>
+            <div class="computer-selection" id="computer-selection">
+
+            </div>
+            <div class="computer-score">
+                <p class="score-text">Score</p>
+                <div class="score-container">
+                    <i data-score="computer" class="check-icon fa-regular fa-circle-check"></i>
+                    <i data-score="computer" class="check-icon fa-regular fa-circle-check"></i>
+                    <i data-score="computer" class="check-icon fa-regular fa-circle-check"></i>
+                    <i data-score="computer" class="check-icon fa-regular fa-circle-check"></i>
+                    <i data-score="computer" class="check-icon fa-regular fa-circle-check"></i>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p class="game-text" id="game-text"></p>
+        </div>
+
+    </div>
+
+    <div class="game-selection">
+        <div class="game-selection-text">Choose an option</div>
+        <div class="game-selection-container">
+            <div class="selection" id="selection" data-selection="paper">
+                <i class="hand fa-solid fa-hand"></i>
+            </div>
+            <div class="selection" id="selection" data-selection="rock">
+                <i class="hand fa-solid fa-hand-back-fist"></i>
+            </div>
+            <div class="selection" id="selection" data-selection="scissors">
+                <i class="hand fa-solid fa-hand-scissors"></i>
+            </div>
+        </div>
+        <button class="start-game" id="start-button">Start Game</button>
+    </div>
 </body>
+
 </html>
